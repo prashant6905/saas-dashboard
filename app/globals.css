@@ -1,0 +1,410 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 240 5% 96.5%; /* Soft light-gray page background #F5F5F7 */
+    --foreground: 222 47% 11%; /* Deep charcoal primary text #111827 */
+    --card: 0 0% 100%; /* Clean white card surfaces #FFFFFF */
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 245 75% 58%; /* Restrained sophisticated indigo accent #4F46E5 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 93%;
+    --secondary-foreground: 222 47% 15%;
+    --muted: 240 5% 94%;
+    --muted-foreground: 215 16% 47%; /* Neutral gray secondary text #6B7280 */
+    --accent: 240 5% 94%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 88%; /* Calibrated light-mode border token */
+    --input: 240 5.9% 88%;
+    --ring: 245 75% 58%;
+    --radius: 1.25rem; /* 20px - clean 18-24px rounded cards */
+
+    /* Icon Tokens - Light Mode */
+    --icon-primary: 215 19% 35%; /* #475569 Slate-600 - High-contrast primary icons */
+    --icon-secondary: 215 16% 47%; /* #64748B Slate-500 - Refined secondary icons */
+    --icon-muted: 215 16% 62%; /* #94A3B8 Slate-400 */
+    --icon-hover: 222 47% 17%; /* #1E293B Slate-800 - Crisp hover */
+    --icon-active: 245 75% 58%; /* Restrained indigo accent icon */
+
+    /* Sidebar & Navigation Tokens - Light Mode */
+    --sidebar-background: 0 0% 100%; /* Crisp white sidebar */
+    --sidebar-border: 240 5.9% 90%;
+    --nav-icon: 215 19% 35%; /* Slate-600 #475569 - Crisp, clearly visible navigation icons */
+    --nav-icon-hover: 222 47% 17%; /* Slate-800 #1E293B */
+    --nav-icon-active: 245 75% 58%; /* Restrained indigo accent icon */
+    --nav-text: 215 19% 30%; /* #334155 - High readability medium-dark slate */
+    --nav-text-hover: 222 47% 11%; /* Slightly darker text on hover */
+    --nav-text-active: 222 47% 11%; /* Dark text on active */
+    --nav-active-bg: 240 5% 95%; /* Soft light-gray background */
+    --nav-active-border: 240 5% 88%; /* Subtle border */
+    --nav-hover-bg: 240 5% 97%; /* Very subtle gray hover */
+    --nav-section-title: 215 16% 45%;
+
+    /* Light Mode Dark Surface System Tokens (Sections 1 & 7) */
+    --surface-dark: 222 20% 12%; /* #181C24 elegant charcoal/navy */
+    --surface-dark-border: 0 0% 100% / 0.10; /* rgba(255, 255, 255, 0.10) */
+    --surface-dark-text: 0 0% 100%; /* #FFFFFF primary text */
+    --surface-dark-text-secondary: 215 25% 85%; /* #CBD5E1 secondary text */
+    --surface-dark-muted: 215 16% 65%; /* #94A3B8 muted text */
+    --surface-dark-icon: 210 40% 98%; /* #F8FAFC primary icon */
+    --surface-dark-icon-secondary: 215 25% 85%; /* #CBD5E1 secondary icon */
+
+    /* Pastel Accents for Light Mode */
+    --pastel-lavender: 268 50% 95%;
+    --pastel-lavender-fg: 268 70% 35%;
+    --pastel-lime: 78 50% 92%;
+    --pastel-lime-fg: 78 70% 25%;
+    --pastel-blue: 218 50% 95%;
+    --pastel-blue-fg: 218 70% 35%;
+    --pastel-peach: 18 50% 95%;
+    --pastel-peach-fg: 18 70% 35%;
+  }
+
+  .dark {
+    --background: 224 35% 6%; /* Refined dark slate #0A0D14 */
+    --foreground: 210 40% 98%;
+    --card: 224 30% 9.5%; /* Large elevated card surface #10141F */
+    --card-foreground: 210 40% 98%;
+    --popover: 224 30% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 245 80% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 224 25% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 224 25% 13%;
+    --muted-foreground: 215 20% 62%;
+    --accent: 224 25% 15%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 224 25% 16%;
+    --input: 224 25% 16%;
+    --ring: 245 80% 65%;
+
+    /* Pastel Accents for Dark Mode */
+    --pastel-lavender: 268 30% 18%;
+    --pastel-lavender-fg: 268 60% 88%;
+    --pastel-lime: 78 40% 16%;
+    --pastel-lime-fg: 78 60% 85%;
+    --pastel-blue: 218 40% 18%;
+    --pastel-blue-fg: 218 70% 88%;
+    --pastel-peach: 18 40% 18%;
+    --pastel-peach-fg: 18 70% 88%;
+
+    /* Icon Tokens - Dark Mode (Preserved 100%) */
+    --icon-primary: 215 20% 65%; /* #94A3B8 */
+    --icon-secondary: 215 16% 50%;
+    --icon-muted: 215 16% 40%;
+    --icon-hover: 210 40% 92%; /* #E2E8F0 */
+    --icon-active: 238 85% 72%; /* #818CF8 */
+
+    /* Sidebar & Navigation Tokens - Dark Mode */
+    --sidebar-background: 224 38% 7%; /* Deep navy-slate #0B0F19 */
+    --sidebar-border: 224 25% 15%;
+    --nav-icon: 215 20% 65%; /* #94A3B8 - Highly visible cool-gray/slate */
+    --nav-icon-hover: 210 40% 92%; /* #E2E8F0 - Bright cool-gray */
+    --nav-icon-active: 238 85% 72%; /* #818CF8 - Vibrant indigo/violet accent */
+    --nav-text: 215 20% 75%; /* #CBD5E1 - Legible muted light gray */
+    --nav-text-hover: 210 40% 98%; /* Near-white on hover */
+    --nav-text-active: 0 0% 100%; /* Pure white text on active */
+    --nav-active-bg: 245 40% 14%; /* Elevated dark indigo surface */
+    --nav-active-border: 245 50% 30%; /* Subtle glowing accent border */
+    --nav-hover-bg: 224 28% 13%; /* Slightly elevated dark surface */
+    --nav-section-title: 215 16% 50%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    font-family: var(--font-sans), Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.011em;
+  }
+
+  .dark body {
+    background-color: hsl(var(--background));
+  }
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-icon-primary: hsl(var(--icon-primary));
+  --color-icon-secondary: hsl(var(--icon-secondary));
+  --color-icon-muted: hsl(var(--icon-muted));
+  --color-icon-hover: hsl(var(--icon-hover));
+  --color-icon-active: hsl(var(--icon-active));
+
+  --color-pastel-lavender: hsl(var(--pastel-lavender));
+  --color-pastel-lavender-fg: hsl(var(--pastel-lavender-fg));
+  --color-pastel-lime: hsl(var(--pastel-lime));
+  --color-pastel-lime-fg: hsl(var(--pastel-lime-fg));
+  --color-pastel-blue: hsl(var(--pastel-blue));
+  --color-pastel-blue-fg: hsl(var(--pastel-blue-fg));
+  --color-pastel-peach: hsl(var(--pastel-peach));
+  --color-pastel-peach-fg: hsl(var(--pastel-peach-fg));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-nav-icon: hsl(var(--nav-icon));
+  --color-nav-icon-hover: hsl(var(--nav-icon-hover));
+  --color-nav-icon-active: hsl(var(--nav-icon-active));
+  --color-nav-text: hsl(var(--nav-text));
+  --color-nav-text-hover: hsl(var(--nav-text-hover));
+  --color-nav-text-active: hsl(var(--nav-text-active));
+  --color-nav-active-bg: hsl(var(--nav-active-bg));
+  --color-nav-active-border: hsl(var(--nav-active-border));
+  --color-nav-hover-bg: hsl(var(--nav-hover-bg));
+  --color-nav-section-title: hsl(var(--nav-section-title));
+
+  --color-surface-dark: hsl(var(--surface-dark));
+  --color-surface-dark-border: hsl(var(--surface-dark-border));
+  --color-surface-dark-text: hsl(var(--surface-dark-text));
+  --color-surface-dark-text-secondary: hsl(var(--surface-dark-text-secondary));
+  --color-surface-dark-muted: hsl(var(--surface-dark-muted));
+  --color-surface-dark-icon: hsl(var(--surface-dark-icon));
+  --color-surface-dark-icon-secondary: hsl(var(--surface-dark-icon-secondary));
+
+  --radius-sm: calc(var(--radius) - 12px);
+  --radius-md: calc(var(--radius) - 6px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 12px);
+  --radius-3xl: calc(var(--radius) + 18px);
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
+  }
+  .dark .shadow-soft {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+  }
+  .shadow-soft-lg {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+  }
+  .dark .shadow-soft-lg {
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.4);
+  }
+  .glass-card {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+  }
+  .dark .glass-card {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Recharts Tooltip Cursor Normalization:
+     Completely eliminates default opaque #ccc / light-gray SVG background rectangle
+     rendered by Recharts across bar charts in both dark and light modes. */
+  .recharts-tooltip-cursor,
+  rect.recharts-tooltip-cursor,
+  .recharts-bar-cursor {
+    fill: transparent !important;
+    stroke: hsl(var(--border) / 0.4) !important;
+  }
+
+  /* =========================================================================
+     LIGHT-MODE DARK SURFACE SYSTEM (Rule: DARK SURFACE = LIGHT TEXT + LIGHT ICONS)
+     Applies high-contrast light text and icons to any intentionally dark surface
+     in Light Mode, while leaving Dark Mode and normal light surfaces unaffected.
+     ========================================================================= */
+
+  /* 1. Base Dark Surface Containers (Light Mode Only) */
+  :root:not(.dark) .surface-dark,
+  :root:not(.dark) [data-surface="dark"],
+  :root:not(.dark) .dark-surface {
+    background-color: #181C24 !important;
+    color: #FFFFFF !important;
+    border-color: rgba(255, 255, 255, 0.10) !important;
+  }
+
+  /* 2. Text Hierarchy within Dark Surfaces (Light Mode Only) */
+  :root:not(.dark) .surface-dark h1,
+  :root:not(.dark) .surface-dark h2,
+  :root:not(.dark) .surface-dark h3,
+  :root:not(.dark) .surface-dark h4,
+  :root:not(.dark) [data-surface="dark"] h1,
+  :root:not(.dark) [data-surface="dark"] h2,
+  :root:not(.dark) [data-surface="dark"] h3,
+  :root:not(.dark) [data-surface="dark"] h4 {
+    color: #FFFFFF !important;
+  }
+
+  /* Override dark/slate text colors that might get nested inside dark surfaces in Light Mode */
+  :root:not(.dark) .surface-dark .text-slate-700,
+  :root:not(.dark) .surface-dark .text-slate-600,
+  :root:not(.dark) .surface-dark .text-slate-500,
+  :root:not(.dark) .surface-dark .text-foreground,
+  :root:not(.dark) [data-surface="dark"] .text-slate-700,
+  :root:not(.dark) [data-surface="dark"] .text-slate-600,
+  :root:not(.dark) [data-surface="dark"] .text-slate-500,
+  :root:not(.dark) [data-surface="dark"] .text-foreground,
+  :root:not(.dark) [class*="bg-[#0B1220]"] .text-slate-700,
+  :root:not(.dark) [class*="bg-[#0B1220]"] .text-slate-600,
+  :root:not(.dark) [class*="bg-[#0B1220]"] .text-foreground,
+  :root:not(.dark) [class*="bg-[#181C24]"] .text-slate-700,
+  :root:not(.dark) [class*="bg-[#181C24]"] .text-slate-600,
+  :root:not(.dark) [class*="bg-[#181C24]"] .text-foreground {
+    color: #CBD5E1 !important;
+  }
+
+  :root:not(.dark) .surface-dark .text-muted-foreground,
+  :root:not(.dark) [data-surface="dark"] .text-muted-foreground,
+  :root:not(.dark) [class*="bg-[#0B1220]"] .text-muted-foreground,
+  :root:not(.dark) [class*="bg-[#181C24]"] .text-muted-foreground {
+    color: #94A3B8 !important;
+  }
+
+  /* 3. Icons within Dark Surfaces (Primary & Secondary - Light Mode Only) */
+  :root:not(.dark) .surface-dark svg,
+  :root:not(.dark) [data-surface="dark"] svg,
+  :root:not(.dark) .dark-surface svg,
+  :root:not(.dark) .dark-pill svg,
+  :root:not(.dark) .dark-badge svg,
+  :root:not(.dark) .dark-circle svg,
+  :root:not(.dark) [data-dark-circle="true"] svg,
+  :root:not(.dark) [class*="bg-[#0B1220]"] svg,
+  :root:not(.dark) [class*="bg-[#181C24]"] svg {
+    color: #F8FAFC !important;
+  }
+
+  :root:not(.dark) .surface-dark svg.icon-secondary,
+  :root:not(.dark) [data-surface="dark"] svg.icon-secondary,
+  :root:not(.dark) [class*="bg-[#0B1220]"] svg.icon-secondary,
+  :root:not(.dark) [class*="bg-[#181C24]"] svg.icon-secondary {
+    color: #CBD5E1 !important;
+  }
+
+  /* 4. Dark Buttons in Light Mode */
+  :root:not(.dark) button.bg-neutral-900,
+  :root:not(.dark) button.bg-neutral-950,
+  :root:not(.dark) button.bg-slate-900,
+  :root:not(.dark) button.bg-slate-950,
+  :root:not(.dark) button.bg-black,
+  :root:not(.dark) button.bg-\[\#181C24\],
+  :root:not(.dark) button.bg-\[\#0B1220\],
+  :root:not(.dark) button[data-surface="dark"],
+  :root:not(.dark) button.surface-dark,
+  :root:not(.dark) a.bg-neutral-900,
+  :root:not(.dark) a.bg-slate-900,
+  :root:not(.dark) a.bg-black,
+  :root:not(.dark) a.bg-\[\#181C24\],
+  :root:not(.dark) a.surface-dark {
+    color: #FFFFFF !important;
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  :root:not(.dark) button.bg-neutral-900 svg,
+  :root:not(.dark) button.bg-neutral-950 svg,
+  :root:not(.dark) button.bg-slate-900 svg,
+  :root:not(.dark) button.bg-slate-950 svg,
+  :root:not(.dark) button.bg-black svg,
+  :root:not(.dark) button.bg-\[\#181C24\] svg,
+  :root:not(.dark) button.bg-\[\#0B1220\] svg,
+  :root:not(.dark) button[data-surface="dark"] svg,
+  :root:not(.dark) button.surface-dark svg,
+  :root:not(.dark) a.bg-neutral-900 svg,
+  :root:not(.dark) a.bg-slate-900 svg,
+  :root:not(.dark) a.bg-black svg,
+  :root:not(.dark) a.bg-\[\#181C24\] svg,
+  :root:not(.dark) a.surface-dark svg {
+    color: #F8FAFC !important;
+  }
+
+  /* 5. Dark Circular Icon Containers (Section 6: ₹, customers, orders, products, analytics) */
+  :root:not(.dark) .dark-circle,
+  :root:not(.dark) .icon-container-dark,
+  :root:not(.dark) [data-dark-circle="true"],
+  :root:not(.dark) .rounded-full.bg-neutral-900,
+  :root:not(.dark) .rounded-full.bg-neutral-800,
+  :root:not(.dark) .rounded-full.bg-slate-900,
+  :root:not(.dark) .rounded-full.bg-slate-800,
+  :root:not(.dark) .rounded-full.bg-black,
+  :root:not(.dark) .rounded-full.bg-\[\#181C24\],
+  :root:not(.dark) .rounded-full.bg-\[\#1F2937\],
+  :root:not(.dark) .rounded-full.bg-\[\#0B1220\],
+  :root:not(.dark) .rounded-lg.bg-neutral-900,
+  :root:not(.dark) .rounded-lg.bg-slate-900,
+  :root:not(.dark) .rounded-lg.bg-black,
+  :root:not(.dark) .rounded-lg.bg-\[\#181C24\],
+  :root:not(.dark) .rounded-lg.bg-\[\#1F2937\],
+  :root:not(.dark) .rounded-lg.bg-\[\#0B1220\] {
+    color: #FFFFFF !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  :root:not(.dark) .dark-circle svg,
+  :root:not(.dark) .icon-container-dark svg,
+  :root:not(.dark) [data-dark-circle="true"] svg,
+  :root:not(.dark) .rounded-full.bg-neutral-900 svg,
+  :root:not(.dark) .rounded-full.bg-neutral-800 svg,
+  :root:not(.dark) .rounded-full.bg-slate-900 svg,
+  :root:not(.dark) .rounded-full.bg-slate-800 svg,
+  :root:not(.dark) .rounded-full.bg-black svg,
+  :root:not(.dark) .rounded-full.bg-\[\#181C24\] svg,
+  :root:not(.dark) .rounded-full.bg-\[\#1F2937\] svg,
+  :root:not(.dark) .rounded-full.bg-\[\#0B1220\] svg,
+  :root:not(.dark) .rounded-lg.bg-neutral-900 svg,
+  :root:not(.dark) .rounded-lg.bg-slate-900 svg,
+  :root:not(.dark) .rounded-lg.bg-black svg,
+  :root:not(.dark) .rounded-lg.bg-\[\#181C24\] svg,
+  :root:not(.dark) .rounded-lg.bg-\[\#1F2937\] svg,
+  :root:not(.dark) .rounded-lg.bg-\[\#0B1220\] svg {
+    color: #F8FAFC !important;
+  }
+
+  /* 6. Dark Badges and Dark Pills (Section 5) */
+  :root:not(.dark) .dark-pill,
+  :root:not(.dark) .dark-badge,
+  :root:not(.dark) [data-badge="dark"],
+  :root:not(.dark) [class*="bg-[#181C24]"][class*="rounded-full"],
+  :root:not(.dark) [class*="bg-[#1F2937]"][class*="rounded-full"],
+  :root:not(.dark) [class*="bg-neutral-900"][class*="rounded-full"],
+  :root:not(.dark) [class*="bg-slate-900"][class*="rounded-full"] {
+    background-color: #1F2937 !important;
+    color: #F8FAFC !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  :root:not(.dark) .dark-pill svg,
+  :root:not(.dark) .dark-badge svg,
+  :root:not(.dark) [data-badge="dark"] svg,
+  :root:not(.dark) [class*="bg-[#181C24]"][class*="rounded-full"] svg,
+  :root:not(.dark) [class*="bg-[#1F2937]"][class*="rounded-full"] svg,
+  :root:not(.dark) [class*="bg-neutral-900"][class*="rounded-full"] svg,
+  :root:not(.dark) [class*="bg-slate-900"][class*="rounded-full"] svg {
+    color: #E2E8F0 !important;
+  }
+}
+
+
