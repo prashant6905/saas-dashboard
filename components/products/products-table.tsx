@@ -34,7 +34,7 @@ export function getStockBadge(status: StockStatus, stock: number) {
           >
             In Stock
           </Badge>
-          <span className="font-mono text-[11px] text-slate-600 dark:text-muted-foreground">
+          <span className="font-mono text-[11px] text-[#52627A] dark:text-[#A8B4C7]">
             ({stock})
           </span>
         </div>
@@ -291,15 +291,15 @@ export function ProductsTable({
       {/* 2. Products Data Table */}
       <CardContent className="p-0">
         <div className="overflow-x-auto border-t border-border/50">
-          <table className="w-full text-left text-xs border-collapse">
-            <thead className="border-b border-border/60 bg-muted/20 text-[11px] font-medium text-slate-600 dark:text-muted-foreground uppercase tracking-wider select-none">
+          <table className="w-full text-left text-[13px] border-collapse">
+            <thead className="border-b border-border/60 bg-muted/20 text-[11px] font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-[0.05em] font-table-header select-none">
               <tr>
                 {/* Product Name & SKU */}
-                <th className="py-3 px-4 font-medium text-slate-600 dark:text-muted-foreground">
+                <th className="py-3 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em]">
                   <button
                     type="button"
                     onClick={() => handleSortClick("name")}
-                    className="flex items-center gap-1 text-slate-600 dark:text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors"
+                    className="flex items-center gap-1 text-[#52627A] dark:text-[#A8B4C7] hover:text-foreground dark:hover:text-white transition-colors"
                   >
                     <span>Product</span>
                     {renderSortIndicator("name")}
@@ -307,14 +307,14 @@ export function ProductsTable({
                 </th>
 
                 {/* Category */}
-                <th className="py-2.5 px-4 font-medium text-slate-600 dark:text-muted-foreground">Category</th>
+                <th className="py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em]">Category</th>
 
                 {/* Price */}
-                <th className="py-2.5 px-4 font-medium text-slate-600 dark:text-muted-foreground text-right">
+                <th className="py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em] text-right">
                   <button
                     type="button"
                     onClick={() => handleSortClick("price")}
-                    className="flex items-center justify-end w-full gap-1 text-slate-600 dark:text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors text-right"
+                    className="flex items-center justify-end w-full gap-1 text-[#52627A] dark:text-[#A8B4C7] hover:text-foreground dark:hover:text-white transition-colors text-right"
                   >
                     <span>Price</span>
                     {renderSortIndicator("price")}
@@ -322,11 +322,11 @@ export function ProductsTable({
                 </th>
 
                 {/* Units Sold */}
-                <th className="py-2.5 px-4 font-medium text-slate-600 dark:text-muted-foreground text-right">
+                <th className="py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em] text-right">
                   <button
                     type="button"
                     onClick={() => handleSortClick("unitsSold")}
-                    className="flex items-center justify-end w-full gap-1 text-slate-600 dark:text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors text-right"
+                    className="flex items-center justify-end w-full gap-1 text-[#52627A] dark:text-[#A8B4C7] hover:text-foreground dark:hover:text-white transition-colors text-right"
                   >
                     <span>Units Sold</span>
                     {renderSortIndicator("unitsSold")}
@@ -334,11 +334,11 @@ export function ProductsTable({
                 </th>
 
                 {/* Revenue */}
-                <th className="py-2.5 px-4 font-medium text-slate-600 dark:text-muted-foreground text-right">
+                <th className="py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em] text-right">
                   <button
                     type="button"
                     onClick={() => handleSortClick("revenue")}
-                    className="flex items-center justify-end w-full gap-1 text-slate-600 dark:text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors text-right"
+                    className="flex items-center justify-end w-full gap-1 text-[#52627A] dark:text-[#A8B4C7] hover:text-foreground dark:hover:text-white transition-colors text-right"
                   >
                     <span>Revenue</span>
                     {renderSortIndicator("revenue")}
@@ -346,11 +346,11 @@ export function ProductsTable({
                 </th>
 
                 {/* Gross Profit */}
-                <th className="py-2.5 px-4 font-medium text-slate-600 dark:text-muted-foreground text-right">
+                <th className="py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em] text-right">
                   <button
                     type="button"
                     onClick={() => handleSortClick("grossProfit")}
-                    className="flex items-center justify-end w-full gap-1 text-slate-600 dark:text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors text-right"
+                    className="flex items-center justify-end w-full gap-1 text-[#52627A] dark:text-[#A8B4C7] hover:text-foreground dark:hover:text-white transition-colors text-right"
                   >
                     <span>Gross Profit</span>
                     {renderSortIndicator("grossProfit")}
@@ -358,11 +358,11 @@ export function ProductsTable({
                 </th>
 
                 {/* Stock Status */}
-                <th className="py-2.5 px-4 font-medium text-slate-600 dark:text-muted-foreground">
+                <th className="py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em]">
                   <button
                     type="button"
                     onClick={() => handleSortClick("stock")}
-                    className="flex items-center gap-1 text-slate-600 dark:text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors"
+                    className="flex items-center gap-1 text-[#52627A] dark:text-[#A8B4C7] hover:text-foreground dark:hover:text-white transition-colors"
                   >
                     <span>Stock</span>
                     {renderSortIndicator("stock")}
@@ -370,10 +370,10 @@ export function ProductsTable({
                 </th>
 
                 {/* Performance */}
-                <th className="py-2.5 px-4 font-medium text-slate-600 dark:text-muted-foreground">Performance</th>
+                <th className="py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em]">Performance</th>
 
                 {/* Actions */}
-                <th className="py-2.5 px-4 font-medium text-center w-12 text-slate-600 dark:text-muted-foreground">
+                <th className="py-2.5 px-4 font-medium text-center w-12 text-[#52627A] dark:text-[#A8B4C7]">
                   <span className="sr-only">Details</span>
                 </th>
               </tr>
@@ -423,7 +423,7 @@ export function ProductsTable({
                         >
                           {product.name}
                         </Link>
-                        <span className="font-mono text-[10px] text-muted-foreground">
+                        <span className="font-mono text-[11px] text-[#64748B] dark:text-[#94A3B8]">
                           {product.id}
                         </span>
                       </div>

@@ -26,14 +26,14 @@ export function OrderItemsTable({ items }: OrderItemsTableProps) {
 
       <CardContent className="p-0">
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs border-collapse">
-            <thead className="border-b border-border/60 bg-muted/20 text-[11px] font-medium text-muted-foreground uppercase tracking-wider select-none">
+          <table className="w-full text-left text-[13px] border-collapse">
+            <thead className="border-b border-border/60 bg-muted/20 text-[11px] font-semibold text-[#52627A] dark:text-[#A8B4C7] uppercase tracking-[0.05em] font-table-header select-none">
               <tr>
                 <th className="py-2.5 px-5 font-medium">Product</th>
-                <th className="py-2.5 px-4 font-medium text-right">Unit Price</th>
-                <th className="py-2.5 px-4 font-medium text-center">Qty</th>
-                <th className="py-2.5 px-4 font-medium text-right">Unit Cost</th>
-                <th className="py-2.5 px-5 font-medium text-right">Total</th>
+                <th className="py-2.5 px-4 font-semibold text-right text-slate-600 dark:text-slate-400 font-table-header tracking-[0.05em]">Unit Price</th>
+                <th className="py-2.5 px-4 font-semibold text-center text-slate-600 dark:text-slate-400 font-table-header tracking-[0.05em]">Qty</th>
+                <th className="py-2.5 px-4 font-semibold text-right text-slate-600 dark:text-slate-400 font-table-header tracking-[0.05em]">Unit Cost</th>
+                <th className="py-2.5 px-5 font-semibold text-right text-slate-600 dark:text-slate-400 font-table-header tracking-[0.05em]">Total</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border/40">

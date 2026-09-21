@@ -48,7 +48,7 @@ export function SidebarNav({
         {navSections.map((section, sIndex) => (
           <div key={section.title || sIndex} className="flex flex-col gap-1">
             {section.title && !collapsed && (
-              <div className="px-3.5 pt-2.5 pb-1 text-[10px] font-semibold tracking-wider text-nav-section-title uppercase select-none">
+              <div className="px-3.5 pt-2.5 pb-1 text-[11px] font-semibold tracking-[0.06em] text-nav-section-title uppercase select-none">
                 {section.title}
               </div>
             )}
@@ -109,7 +109,7 @@ export function SidebarNav({
                   href={isPermitted ? item.href : "/dashboard?error=admin_required"}
                   onClick={isPermitted ? onNavigate : undefined}
                   className={cn(
-                    "group relative flex items-center gap-2.5 rounded-xl px-3 py-2 text-xs font-medium tracking-tight transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40",
+                    "group relative flex items-center gap-2.5 rounded-xl px-3 py-2 text-sm font-medium tracking-[-0.01em] transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40",
                     isActive
                       ? "bg-nav-active-bg text-nav-text-active font-medium shadow-2xs border border-nav-active-border"
                       : "text-nav-text hover:bg-nav-hover-bg hover:text-nav-text-hover border border-transparent",

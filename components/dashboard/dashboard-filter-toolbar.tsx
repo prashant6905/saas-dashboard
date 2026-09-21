@@ -157,14 +157,14 @@ export function DashboardFilterToolbar({
                 )}
                 aria-label="Filter by date range"
               >
-                <CalendarIcon className="h-3.5 w-3.5 text-slate-700 dark:text-slate-300 shrink-0" />
+                <CalendarIcon className="h-3.5 w-3.5 text-[#475569] dark:text-[#94A3B8] shrink-0" />
                 <span>
                   Date:{" "}
                   <strong className="font-semibold text-foreground">
                     {currentRange.label}
                   </strong>
                 </span>
-                <ChevronDown className="h-3 w-3 text-slate-600 dark:text-slate-400 ml-0.5" />
+                <ChevronDown className="h-3 w-3 text-[#64748B] dark:text-[#94A3B8] ml-0.5" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-52">
@@ -196,14 +196,14 @@ export function DashboardFilterToolbar({
                 )}
                 aria-label="Filter by Indian state or region"
               >
-                <MapPin className="h-3.5 w-3.5 text-slate-700 dark:text-slate-300 shrink-0" />
+                <MapPin className="h-3.5 w-3.5 text-[#475569] dark:text-[#94A3B8] shrink-0" />
                 <span>
                   State:{" "}
                   <strong className="font-semibold text-foreground">
                     {filters.region === "all" ? "All" : filters.region}
                   </strong>
                 </span>
-                <ChevronDown className="h-3 w-3 text-slate-600 dark:text-slate-400 ml-0.5" />
+                <ChevronDown className="h-3 w-3 text-[#64748B] dark:text-[#94A3B8] ml-0.5" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-48 max-h-72 overflow-y-auto">
@@ -235,14 +235,14 @@ export function DashboardFilterToolbar({
                 )}
                 aria-label="Filter by merchandise category"
               >
-                <Layers className="h-3.5 w-3.5 text-slate-700 dark:text-slate-300 shrink-0" />
+                <Layers className="h-3.5 w-3.5 text-[#475569] dark:text-[#94A3B8] shrink-0" />
                 <span className="truncate">
                   Category:{" "}
                   <strong className="font-semibold text-foreground">
                     {filters.category === "all" ? "All" : selectedCategoryName}
                   </strong>
                 </span>
-                <ChevronDown className="h-3 w-3 text-slate-600 dark:text-slate-400 ml-0.5 shrink-0" />
+                <ChevronDown className="h-3 w-3 text-[#64748B] dark:text-[#94A3B8] ml-0.5 shrink-0" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-56 max-h-72 overflow-y-auto">
@@ -277,14 +277,14 @@ export function DashboardFilterToolbar({
                 )}
                 aria-label="Filter by order status"
               >
-                <Tag className="h-3.5 w-3.5 text-slate-700 dark:text-slate-300 shrink-0" />
+                <Tag className="h-3.5 w-3.5 text-[#475569] dark:text-[#94A3B8] shrink-0" />
                 <span>
                   Status:{" "}
                   <strong className="font-semibold text-foreground">
                     {filters.status === "all" ? "All" : filters.status}
                   </strong>
                 </span>
-                <ChevronDown className="h-3 w-3 text-slate-600 dark:text-slate-400 ml-0.5" />
+                <ChevronDown className="h-3 w-3 text-[#64748B] dark:text-[#94A3B8] ml-0.5" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-44">
@@ -316,14 +316,14 @@ export function DashboardFilterToolbar({
                 )}
                 aria-label="Filter by customer segment"
               >
-                <Users className="h-3.5 w-3.5 text-slate-700 dark:text-slate-300 shrink-0" />
+                <Users className="h-3.5 w-3.5 text-[#475569] dark:text-[#94A3B8] shrink-0" />
                 <span>
                   Segment:{" "}
                   <strong className="font-semibold text-foreground">
                     {filters.segment === "all" ? "All" : filters.segment}
                   </strong>
                 </span>
-                <ChevronDown className="h-3 w-3 text-slate-600 dark:text-slate-400 ml-0.5" />
+                <ChevronDown className="h-3 w-3 text-[#64748B] dark:text-[#94A3B8] ml-0.5" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-44">

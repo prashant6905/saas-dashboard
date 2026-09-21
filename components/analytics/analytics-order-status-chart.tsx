@@ -32,7 +32,7 @@ function CustomTooltip({ active, payload }: CustomTooltipProps) {
   if (active && payload && payload.length) {
     const item = payload[0].payload;
     return (
-      <div className="surface-dark rounded-xl border border-slate-800/80 bg-[#0B1220]/95 p-2.5 shadow-soft-lg backdrop-blur-md text-xs dark:bg-[#0B1220]/95 dark:border-slate-700/70">
+      <div className="rounded-xl border border-slate-200/90 bg-white p-3 shadow-lg text-xs text-[#111827] dark:bg-[#111827] dark:border-slate-800 dark:text-[#F8FAFC] dark:shadow-2xl">
         <div className="flex items-center gap-1.5 mb-1">
           <span
             className="h-2.5 w-2.5 rounded-full"
@@ -41,13 +41,13 @@ function CustomTooltip({ active, payload }: CustomTooltipProps) {
           <p className="font-semibold text-slate-100">{item.status}</p>
         </div>
         <div className="space-y-0.5 font-mono text-[11px]">
-          <p className="text-slate-400">
+          <p className="text-[#64748B] dark:text-[#94A3B8]">
             Count: <span className="font-bold text-white">{formatNumber(item.count)}</span> orders
           </p>
-          <p className="text-slate-400">
+          <p className="text-[#64748B] dark:text-[#94A3B8]">
             Share: <span className="font-medium text-slate-200">{item.percentageOfTotal}%</span>
           </p>
-          <p className="text-slate-400">
+          <p className="text-[#64748B] dark:text-[#94A3B8]">
             Value: <span className="font-medium text-slate-200">{formatCurrency(item.revenue)}</span>
           </p>
         </div>

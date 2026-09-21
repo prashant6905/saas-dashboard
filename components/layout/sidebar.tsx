@@ -63,7 +63,7 @@ export function Sidebar({
                   </svg>
                 </div>
                 <div className="flex flex-1 flex-col overflow-hidden">
-                  <span className="truncate text-xs font-semibold text-foreground tracking-tight">
+                  <span className="truncate text-[13px] font-semibold text-foreground tracking-tight">
                     UrbanNest D2C
                   </span>
                   <span className="truncate text-[10px] text-muted-foreground font-medium">
@@ -74,7 +74,7 @@ export function Sidebar({
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-56">
-              <DropdownMenuLabel className="text-[10px] uppercase tracking-wider text-muted-foreground">
+              <DropdownMenuLabel className="text-[11px] uppercase tracking-[0.05em] font-semibold text-muted-foreground font-table-header">
                 Organizations
               </DropdownMenuLabel>
               <DropdownMenuItem className="gap-2 font-medium text-xs">

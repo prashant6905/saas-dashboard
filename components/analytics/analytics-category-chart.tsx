@@ -39,31 +39,31 @@ function CustomTooltip({ active, payload }: CustomTooltipProps) {
   if (active && payload && payload.length) {
     const item = payload[0].payload;
     return (
-      <div className="surface-dark rounded-xl border border-slate-800/80 bg-[#0B1220]/95 p-3 shadow-soft-lg backdrop-blur-md text-xs dark:bg-[#0B1220]/95 dark:border-slate-700/70">
+      <div className="rounded-xl border border-slate-200/90 bg-white p-3 shadow-lg text-xs text-[#111827] dark:bg-[#111827] dark:border-slate-800 dark:text-[#F8FAFC] dark:shadow-2xl">
         <p className="font-semibold text-slate-100 mb-1.5 pb-1 border-b border-slate-800/60">
           {item.categoryName}
         </p>
         <div className="space-y-1 font-mono text-[11px]">
           <div className="flex items-center justify-between gap-4">
-            <span className="text-slate-400">Revenue:</span>
+            <span className="text-[#64748B] dark:text-[#94A3B8]">Revenue:</span>
             <span className="font-bold text-white">
               {formatCurrency(item.revenue)}
             </span>
           </div>
           <div className="flex items-center justify-between gap-4">
-            <span className="text-slate-400">Market Share:</span>
+            <span className="text-[#64748B] dark:text-[#94A3B8]">Market Share:</span>
             <span className="font-medium text-emerald-400">
               {item.percentageOfTotal}% of total
             </span>
           </div>
           <div className="flex items-center justify-between gap-4">
-            <span className="text-slate-400">Units Sold:</span>
+            <span className="text-[#64748B] dark:text-[#94A3B8]">Units Sold:</span>
             <span className="font-medium text-slate-200">
               {formatNumber(item.unitsSold)} units
             </span>
           </div>
           <div className="flex items-center justify-between gap-4">
-            <span className="text-slate-400">Orders Placed:</span>
+            <span className="text-[#64748B] dark:text-[#94A3B8]">Orders Placed:</span>
             <span className="font-medium text-slate-200">
               {formatNumber(item.ordersCount)} orders
             </span>

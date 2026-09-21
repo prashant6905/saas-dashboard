@@ -86,7 +86,7 @@ export function CustomerDetailHeader({ customer }: CustomerDetailHeaderProps) {
       <div className="flex items-center justify-between">
         <Link
           href="/customers"
-          className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-foreground dark:hover:text-white transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-[#475569] dark:text-[#CBD5E1] hover:text-[#111827] dark:hover:text-[#F8FAFC] transition-colors"
         >
           <ArrowLeft className="h-3.5 w-3.5 text-slate-700 dark:text-slate-300" />
           <span>Back to Customers</span>
@@ -103,7 +103,7 @@ export function CustomerDetailHeader({ customer }: CustomerDetailHeaderProps) {
 
           <div className="space-y-2">
             <div className="flex flex-wrap items-center gap-2">
-              <h1 className="text-xl font-bold tracking-tight text-foreground">
+              <h1 className="text-xl sm:text-2xl font-[650] sm:font-bold tracking-[-0.02em] text-[#111827] dark:text-[#F8FAFC] font-heading">
                 {customer.name}
               </h1>
 
@@ -178,7 +178,7 @@ export function CustomerDetailHeader({ customer }: CustomerDetailHeaderProps) {
             <span className="text-[11px] uppercase tracking-wider text-muted-foreground block font-medium">
               Total Spend
             </span>
-            <span className="font-mono text-xl font-bold text-foreground">
+            <span className="text-xl font-semibold tracking-tight text-foreground font-kpi tabular-nums">
               {formatINR(customer.totalSpend)}
             </span>
           </div>
@@ -187,7 +187,7 @@ export function CustomerDetailHeader({ customer }: CustomerDetailHeaderProps) {
             <span className="text-[11px] uppercase tracking-wider text-muted-foreground block font-medium">
               Total Orders
             </span>
-            <span className="font-mono text-xl font-bold text-foreground">
+            <span className="text-xl font-semibold tracking-tight text-foreground font-kpi tabular-nums">
               {formatIndianNumber(customer.totalOrders)}
             </span>
           </div>
@@ -196,7 +196,7 @@ export function CustomerDetailHeader({ customer }: CustomerDetailHeaderProps) {
             <span className="text-[11px] uppercase tracking-wider text-muted-foreground block font-medium">
               Avg Order Value
             </span>
-            <span className="font-mono text-xl font-bold text-foreground">
+            <span className="text-xl font-semibold tracking-tight text-foreground font-kpi tabular-nums">
               {formatINR(customer.averageOrderValue)}
             </span>
           </div>

@@ -150,7 +150,7 @@ function LoginForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@company.com"
-                className="w-full rounded-lg border border-border/70 bg-card/70 py-2 pl-9 pr-3 text-xs text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/40 shadow-2xs transition-colors"
+                className="w-full rounded-lg border border-border/70 bg-card/70 py-2 pl-9 pr-3 text-xs text-foreground placeholder:text-[#64748B] dark:placeholder:text-[#94A3B8] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/40 shadow-2xs transition-colors"
                 disabled={isLoading}
               />
             </div>
@@ -167,7 +167,7 @@ function LoginForm() {
               </label>
               <Link
                 href="/forgot-password"
-                className="text-muted-foreground hover:text-primary transition-colors text-[11px]"
+                className="text-[#64748B] dark:text-[#94A3B8] hover:text-primary transition-colors text-[11px]"
               >
                 Forgot password?
               </Link>
@@ -181,7 +181,7 @@ function LoginForm() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••••••"
-                className="w-full rounded-lg border border-border/70 bg-card/70 py-2 pl-9 pr-9 text-xs text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/40 shadow-2xs transition-colors"
+                className="w-full rounded-lg border border-border/70 bg-card/70 py-2 pl-9 pr-9 text-xs text-foreground placeholder:text-[#64748B] dark:placeholder:text-[#94A3B8] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/40 shadow-2xs transition-colors"
                 disabled={isLoading}
               />
               <button

@@ -30,22 +30,22 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   if (active && payload && payload.length) {
     const point = payload[0].payload;
     return (
-      <div className="surface-dark rounded-xl border border-slate-800/80 bg-[#0B1220]/95 p-3 shadow-soft-lg backdrop-blur-md text-xs dark:bg-[#0B1220]/95 dark:border-slate-700/70 dark:shadow-[0_0_25px_-5px_rgba(0,0,0,0.6)]">
-        <p className="font-semibold text-slate-100 mb-1.5">{label}</p>
+      <div className="rounded-xl border border-slate-200/90 bg-white p-3 shadow-lg text-xs text-[#111827] dark:bg-[#111827] dark:border-slate-800 dark:text-[#F8FAFC] dark:shadow-2xl">
+        <p className="font-semibold text-[#111827] dark:text-[#F8FAFC] mb-1.5">{label}</p>
         <div className="space-y-1 font-mono text-[11px]">
           <div className="flex items-center justify-between gap-4">
-            <span className="text-slate-400">Revenue:</span>
-            <span className="text-white font-bold">
+            <span className="text-[#64748B] dark:text-[#94A3B8]">Revenue:</span>
+            <span className="text-[#111827] dark:text-[#F8FAFC] font-semibold tabular-nums">
               {formatINR(point.revenue)}
             </span>
           </div>
           <div className="flex items-center justify-between gap-4">
-            <span className="text-slate-400">Orders:</span>
-            <span className="text-slate-200 font-medium">{formatIndianNumber(point.ordersCount)}</span>
+            <span className="text-[#64748B] dark:text-[#94A3B8]">Orders:</span>
+            <span className="text-[#475569] dark:text-[#CBD5E1] font-medium tabular-nums">{formatIndianNumber(point.ordersCount)}</span>
           </div>
           <div className="flex items-center justify-between gap-4">
-            <span className="text-slate-400">Gross Profit:</span>
-            <span className="text-emerald-400 font-semibold">
+            <span className="text-[#64748B] dark:text-[#94A3B8]">Gross Profit:</span>
+            <span className="text-[#059669] dark:text-[#10B981] font-semibold tabular-nums">
               {formatINR(point.grossProfit)}
             </span>
           </div>

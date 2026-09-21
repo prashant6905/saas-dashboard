@@ -102,7 +102,7 @@ export function AnalyticsFinancialSummary({
             className="group rounded-3xl border border-border/70 shadow-soft bg-card p-6 transition-all duration-300 hover:shadow-soft-lg hover:border-foreground/20 hover:-translate-y-0.5 overflow-hidden flex flex-col justify-between"
           >
             <div className="flex items-center justify-between pb-3">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-neutral-200/70 dark:bg-neutral-800 px-3 py-0.5 text-xs font-semibold text-neutral-800 dark:text-neutral-200 border border-neutral-300/40 dark:border-neutral-700/40">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-neutral-200/70 dark:bg-neutral-800 px-3 py-0.5 text-xs font-medium text-[#475569] dark:text-[#CBD5E1] border border-neutral-300/40 dark:border-neutral-700/40">
                 <Icon className="h-3.5 w-3.5 opacity-80" aria-hidden="true" />
                 <span>{card.title}</span>
               </span>
@@ -112,7 +112,7 @@ export function AnalyticsFinancialSummary({
             </div>
             
             <div className="my-2">
-              <div className="text-2xl sm:text-3xl font-black tracking-tight text-foreground">
+              <div className="text-2xl sm:text-[28px] font-[650] sm:font-bold tracking-[-0.025em] text-[#0F172A] dark:text-[#F8FAFC] font-kpi tabular-nums">
                 {card.value}
               </div>
             </div>
@@ -121,11 +121,11 @@ export function AnalyticsFinancialSummary({
               {card.change !== null ? (
                 <span
                   className={cn(
-                    "inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 font-bold text-xs",
+                    "inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 font-medium text-xs tabular-nums",
                     card.isPositive &&
-                      "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20",
+                      "bg-emerald-500/10 text-[#059669] dark:text-[#10B981] border border-emerald-500/20",
                     card.isNegative &&
-                      "bg-rose-500/10 text-rose-700 dark:text-rose-400 border border-rose-500/20",
+                      "bg-rose-500/10 text-[#DC2626] dark:text-[#F43F5E] border border-rose-500/20",
                     !card.isPositive &&
                       !card.isNegative &&
                       "bg-neutral-100 text-muted-foreground border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700"
@@ -141,7 +141,7 @@ export function AnalyticsFinancialSummary({
                   {card.changeText}
                 </span>
               ) : (
-                <span className="inline-flex items-center rounded-full px-2.5 py-0.5 font-bold text-xs bg-neutral-100 text-muted-foreground border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700">
+                <span className="inline-flex items-center rounded-full px-2.5 py-0.5 font-medium text-xs tabular-nums bg-neutral-100 text-muted-foreground border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700">
                   {card.changeText}
                 </span>
               )}

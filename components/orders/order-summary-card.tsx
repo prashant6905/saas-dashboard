@@ -38,7 +38,7 @@ export function OrderSummaryCard({ order }: OrderSummaryCardProps) {
         {/* Subtotal */}
         <div className="flex items-center justify-between text-xs">
           <span className="text-muted-foreground">Subtotal</span>
-          <span className="font-mono font-medium text-foreground">
+          <span className="font-medium text-foreground text-xs tabular-nums">
             {formatINR(subtotal)}
           </span>
         </div>
@@ -46,7 +46,7 @@ export function OrderSummaryCard({ order }: OrderSummaryCardProps) {
         {/* Cost of Goods Sold */}
         <div className="flex items-center justify-between text-xs">
           <span className="text-muted-foreground">Cost of Goods (COGS)</span>
-          <span className="font-mono text-muted-foreground">
+          <span className="text-muted-foreground text-xs tabular-nums">
             {formatINR(order.totalCost)}
           </span>
         </div>
@@ -55,7 +55,7 @@ export function OrderSummaryCard({ order }: OrderSummaryCardProps) {
         <div className="flex items-center justify-between text-xs">
           <span className="text-muted-foreground">Gross Profit</span>
           <div className="text-right">
-            <span className="font-mono font-semibold text-emerald-500">
+            <span className="font-medium text-emerald-500 text-xs tabular-nums">
               {formatINR(order.grossProfit)}
             </span>
             <span className="text-[11px] text-muted-foreground ml-1.5">
@@ -75,7 +75,7 @@ export function OrderSummaryCard({ order }: OrderSummaryCardProps) {
         {/* Total Amount */}
         <div className="flex items-center justify-between">
           <span className="text-sm font-semibold text-foreground">Total</span>
-          <span className="font-mono text-lg font-bold text-foreground">
+          <span className="font-kpi text-lg font-semibold text-foreground tabular-nums">
             {formatINR(order.totalAmount)}
           </span>
         </div>

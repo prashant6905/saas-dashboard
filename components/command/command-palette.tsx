@@ -161,7 +161,7 @@ export function CommandPalette() {
               }}
               onKeyDown={handleKeyDown}
               placeholder="Type a command or search platform..."
-              className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-hidden"
+              className="flex-1 bg-transparent text-sm text-foreground placeholder:text-[#64748B] dark:placeholder:text-[#94A3B8] focus:outline-hidden"
             />
             {query ? (
               <button
@@ -206,7 +206,7 @@ export function CommandPalette() {
 
                 return (
                   <div key={groupName} className="mb-2 last:mb-0">
-                    <div className="px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-nav-section-title">
+                    <div className="px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#52627A] dark:text-[#A8B4C7] font-table-header">
                       {groupName}
                     </div>
                     <div className="space-y-0.5">
@@ -241,9 +241,9 @@ export function CommandPalette() {
                                 <Icon className="h-3.5 w-3.5" />
                               </div>
                               <div className="flex flex-col overflow-hidden">
-                                <span className="truncate">{cmd.title}</span>
+                                <span className="truncate text-xs sm:text-[13px] font-medium tracking-tight">{cmd.title}</span>
                                 {cmd.description && (
-                                  <span className="truncate text-[10px] text-muted-foreground">
+                                  <span className="truncate text-[11px] text-muted-foreground">
                                     {cmd.description}
                                   </span>
                                 )}

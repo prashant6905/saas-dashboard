@@ -27,7 +27,7 @@ export function ProductDetailHeader({ product }: ProductDetailHeaderProps) {
       <div className="flex items-center justify-between">
         <Link
           href="/products"
-          className="inline-flex items-center gap-1.5 text-xs text-slate-700 dark:text-slate-300 hover:text-foreground dark:hover:text-white transition-colors font-medium"
+          className="inline-flex items-center gap-1.5 text-xs text-[#475569] dark:text-[#CBD5E1] hover:text-[#111827] dark:hover:text-[#F8FAFC] transition-colors font-medium"
         >
           <ArrowLeft className="h-3.5 w-3.5 text-slate-700 dark:text-slate-300" />
           <span>Back to Products</span>
@@ -38,7 +38,7 @@ export function ProductDetailHeader({ product }: ProductDetailHeaderProps) {
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 p-5 rounded-2xl border border-border/75 bg-card/90 shadow-soft backdrop-blur-sm">
         <div className="space-y-2">
           <div className="flex flex-wrap items-center gap-2.5">
-            <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
+            <h1 className="text-xl sm:text-2xl font-[650] sm:font-bold tracking-[-0.02em] text-[#111827] dark:text-[#F8FAFC] font-heading">
               {product.name}
             </h1>
             <button
@@ -65,7 +65,7 @@ export function ProductDetailHeader({ product }: ProductDetailHeaderProps) {
           <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
             <span>
               Catalog Price:{" "}
-              <strong className="font-mono text-foreground font-semibold">
+              <strong className="font-mono text-[#111827] dark:text-[#F8FAFC] font-semibold tabular-nums">
                 {formatINR(product.price)}
               </strong>
             </span>

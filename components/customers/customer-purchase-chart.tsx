@@ -29,13 +29,13 @@ function CustomTooltip({ active, payload }: CustomTooltipProps) {
   if (active && payload && payload.length) {
     const point = payload[0].payload;
     return (
-      <div className="surface-dark rounded-xl border border-slate-800/80 bg-[#0B1220]/95 p-2.5 shadow-soft-lg backdrop-blur-md text-xs dark:bg-[#0B1220]/95 dark:border-slate-700/70">
-        <p className="font-semibold text-slate-100 mb-1">{point.label}</p>
+      <div className="rounded-xl border border-slate-200/90 bg-white p-3 shadow-lg text-xs text-[#111827] dark:bg-[#111827] dark:border-slate-800 dark:text-[#F8FAFC] dark:shadow-2xl">
+        <p className="font-semibold text-[#111827] dark:text-[#F8FAFC] mb-1.5">{point.label}</p>
         <div className="space-y-0.5 font-mono text-[11px]">
-          <p className="text-emerald-400 font-medium">
+          <p className="text-[#059669] dark:text-[#10B981] font-semibold tabular-nums">
             Spend: {formatINR(point.spend)}
           </p>
-          <p className="text-slate-200 font-medium">
+          <p className="text-[#475569] dark:text-[#CBD5E1] font-medium tabular-nums">
             Orders: {formatIndianNumber(point.ordersCount)}
           </p>
         </div>

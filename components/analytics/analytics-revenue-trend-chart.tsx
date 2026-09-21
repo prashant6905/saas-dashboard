@@ -47,7 +47,7 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
     const cogs = Math.max(0, point.revenue - point.grossProfit);
 
     return (
-      <div className="surface-dark rounded-xl border border-slate-800/80 bg-[#0B1220]/95 p-3 shadow-soft-lg backdrop-blur-md text-xs dark:bg-[#0B1220]/95 dark:border-slate-700/70">
+      <div className="rounded-xl border border-slate-200/90 bg-white p-3 shadow-lg text-xs text-[#111827] dark:bg-[#111827] dark:border-slate-800 dark:text-[#F8FAFC] dark:shadow-2xl">
         <p className="font-semibold text-slate-100 mb-1.5 pb-1 border-b border-slate-800/60">
           {label}
         </p>

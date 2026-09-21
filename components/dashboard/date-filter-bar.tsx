@@ -118,9 +118,7 @@ export function DateFilterBar({
               onClick={() => onSelectPreset(preset)}
               className={cn(
                 "rounded-md px-3 py-1 text-xs font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
-                isActive
-                  ? "bg-background text-foreground shadow-2xs font-semibold"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/60"
+                isActive ? "bg-background text-[#111827] dark:text-[#F8FAFC] shadow-2xs font-semibold" : "text-[#64748B] dark:text-[#94A3B8] hover:text-[#111827] dark:hover:text-[#F8FAFC] hover:bg-secondary/60"
               )}
               aria-pressed={isActive}
             >
@@ -132,7 +130,7 @@ export function DateFilterBar({
 
       {/* Date Span Indicator & Refresh Button */}
       <div className="flex items-center gap-2">
-        <div className="flex items-center gap-1.5 rounded-md border border-border/60 bg-background/50 px-2.5 py-1 text-xs text-muted-foreground">
+        <div className="flex items-center gap-1.5 rounded-md border border-border/60 bg-background/50 px-2.5 py-1 text-xs text-[#64748B] dark:text-[#94A3B8]">
           <CalendarIcon className="h-3.5 w-3.5 text-muted-foreground/70" />
           <span className="font-mono text-[11px]">
             {formatDateLabel(currentRange.startDate)} –{" "}

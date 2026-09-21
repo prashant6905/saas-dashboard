@@ -27,7 +27,7 @@ const buttonVariants = cva(
         subtle:
           "bg-accent/50 text-foreground hover:bg-accent border border-border/40 [&_svg]:text-slate-700 dark:[&_svg]:text-slate-300",
         pill:
-          "rounded-full border border-neutral-300 dark:border-neutral-700 bg-background hover:bg-neutral-100 dark:hover:bg-neutral-800 text-foreground font-semibold shadow-2xs [&_svg]:text-slate-700 dark:[&_svg]:text-slate-300",
+          "rounded-full border border-neutral-300 dark:border-neutral-700 bg-background hover:bg-neutral-100 dark:hover:bg-neutral-800 text-foreground font-medium shadow-2xs [&_svg]:text-slate-700 dark:[&_svg]:text-slate-300",
       },
       size: {
         default: "h-8 px-3 py-1.5",
@@ -35,8 +35,8 @@ const buttonVariants = cva(
         lg: "h-9 rounded-xl px-4 text-sm",
         icon: "h-8 w-8 rounded-lg",
         "icon-sm": "h-7 w-7 rounded-lg",
-        pill: "h-8.5 rounded-full px-4 text-xs font-semibold",
-        "pill-sm": "h-7 rounded-full px-3 text-[11px] font-semibold",
+        pill: "h-8.5 rounded-full px-4 text-xs font-medium tracking-tight",
+        "pill-sm": "h-7 rounded-full px-3 text-[11px] font-medium tracking-tight",
         circle: "h-8 w-8 rounded-full p-0",
       },
     },

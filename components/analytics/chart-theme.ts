@@ -126,3 +126,18 @@ export function formatDateTick(tickItem: string): string {
   }
   return tickItem;
 }
+
+
+/**
+ * Typography and Theme-Aware Styling for Charts (Light & Dark Mode)
+ */
+export const CHART_THEME = {
+  tooltipContainer: "rounded-xl border border-slate-200/90 bg-white p-3 shadow-lg text-xs text-[#111827] dark:bg-[#111827] dark:border-slate-800 dark:text-[#F8FAFC] dark:shadow-2xl",
+  tooltipTitle: "font-semibold text-[#111827] dark:text-[#F8FAFC] mb-1.5",
+  tooltipLabel: "text-[#64748B] dark:text-[#94A3B8]",
+  tooltipValue: "text-[#111827] dark:text-[#F8FAFC] font-semibold tabular-nums",
+  tooltipSecondaryValue: "text-[#475569] dark:text-[#CBD5E1] font-medium tabular-nums",
+  tooltipSuccessValue: "text-[#059669] dark:text-[#10B981] font-semibold tabular-nums",
+  legendText: "text-[#475569] dark:text-[#CBD5E1]",
+  axisText: "hsl(var(--muted-foreground))",
+};

@@ -126,10 +126,10 @@ function DashboardContent() {
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
             <span>Command Center • Live Overview</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
+          <h1 className="text-[32px] sm:text-[34px] font-semibold tracking-[-0.025em] leading-tight text-foreground font-heading">
             Dashboard
           </h1>
-          <p className="text-xs sm:text-sm text-muted-foreground">
+          <p className="text-xs sm:text-[13px] text-muted-foreground leading-relaxed tracking-[-0.01em]">
             Real-time commerce telemetry, order velocity, and customer insights across Indian markets.
           </p>
         </div>

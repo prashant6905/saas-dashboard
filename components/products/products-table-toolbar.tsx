@@ -109,7 +109,7 @@ export function ProductsTableToolbar({
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               onBlur={() => onSearchChange(searchValue)}
-              className="h-8 w-full rounded-lg border border-border/70 bg-card/70 pl-8 pr-7 text-xs text-foreground placeholder:text-muted-foreground focus-visible:border-primary/40 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary/20 shadow-2xs transition-colors"
+              className="h-8 w-full rounded-lg border border-border/70 bg-card/70 pl-8 pr-7 text-xs text-foreground placeholder:text-[#64748B] dark:placeholder:text-[#94A3B8] focus-visible:border-primary/40 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary/20 shadow-2xs transition-colors"
             />
             {searchValue && (
               <button

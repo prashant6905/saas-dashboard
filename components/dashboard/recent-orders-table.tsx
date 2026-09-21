@@ -59,8 +59,8 @@ export function RecentOrdersTable({
       </CardHeader>
       <CardContent className="p-0">
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
-            <thead className="border-b border-border/60 bg-muted/20 text-[11px] font-medium text-muted-foreground uppercase tracking-wider">
+          <table className="w-full text-left text-[13px]">
+            <thead className="border-b border-border/60 bg-muted/20 text-[11px] font-semibold text-[#52627A] dark:text-[#A8B4C7] uppercase tracking-[0.05em] font-table-header">
               <tr>
                 <th className="py-3 pl-5 pr-3">Order ID</th>
                 <th className="py-3 px-3">Customer</th>
@@ -84,21 +84,21 @@ export function RecentOrdersTable({
                       key={order.id}
                       className="transition-colors hover:bg-muted/25 group"
                     >
-                      <td className="py-3 pl-5 pr-3 font-mono font-medium text-foreground">
+                      <td className="py-3 pl-5 pr-3 font-mono text-[13px] font-semibold text-[#4338CA] dark:text-[#A78BFA] tabular-nums">
                         {order.id}
                       </td>
-                      <td className="py-3 px-3">
-                        <div className="font-medium text-foreground truncate max-w-[140px]">
+                      <td className="py-3 px-3 text-[13px] font-medium text-foreground">
+                        <div className="font-medium text-[#111827] dark:text-[#F8FAFC] text-[13px] truncate max-w-[140px]">
                           {customer?.name ?? "Customer"}
                         </div>
-                        <div className="text-[10px] text-muted-foreground truncate max-w-[140px]">
+                        <div className="text-xs text-[#64748B] dark:text-[#94A3B8] truncate max-w-[140px]">
                           {customer?.email ?? order.customerId}
                         </div>
                       </td>
-                      <td className="py-3 px-3 text-muted-foreground font-mono text-[11px]">
+                      <td className="py-3 px-3 text-[#475569] dark:text-[#CBD5E1] text-[13px] font-medium tabular-nums">
                         {formatIndianDate(order.createdAt)}
                       </td>
-                      <td className="py-3 px-3 text-right font-mono font-semibold text-foreground">
+                      <td className="py-3 px-3 text-right font-semibold text-[#111827] dark:text-[#F8FAFC] tabular-nums text-[13px]">
                         {formatINR(order.totalAmount)}
                       </td>
                       <td className="py-3 pl-3 pr-5 text-right">

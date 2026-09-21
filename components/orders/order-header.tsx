@@ -69,7 +69,7 @@ export function OrderHeader({ order }: OrderHeaderProps) {
       <div className="flex items-center justify-between">
         <Link
           href="/orders"
-          className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-700 dark:text-slate-300 transition-colors hover:text-foreground dark:hover:text-white"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-[#475569] dark:text-[#CBD5E1] transition-colors hover:text-[#111827] dark:hover:text-[#F8FAFC]"
         >
           <ArrowLeft className="h-3.5 w-3.5 text-slate-700 dark:text-slate-300" />
           <span>Back to Orders</span>
@@ -93,7 +93,7 @@ export function OrderHeader({ order }: OrderHeaderProps) {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between rounded-lg border border-border/70 bg-card p-5">
         <div className="space-y-1.5">
           <div className="flex flex-wrap items-center gap-2.5">
-            <h1 className="text-xl font-bold tracking-tight text-foreground font-mono">
+            <h1 className="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-[#111827] dark:text-[#F8FAFC] font-mono tabular-nums">
               {order.id}
             </h1>
             <button
@@ -129,7 +129,7 @@ export function OrderHeader({ order }: OrderHeaderProps) {
             <span className="text-[11px] uppercase tracking-wider text-muted-foreground block font-medium">
               Total Amount
             </span>
-            <span className="font-mono text-xl font-bold text-foreground">
+            <span className="font-mono text-xl font-bold text-[#111827] dark:text-[#F8FAFC] tabular-nums">
               {formatINR(order.totalAmount)}
             </span>
           </div>
@@ -138,7 +138,7 @@ export function OrderHeader({ order }: OrderHeaderProps) {
             <span className="text-[11px] uppercase tracking-wider text-muted-foreground block font-medium">
               Items
             </span>
-            <span className="font-mono text-base font-semibold text-foreground">
+            <span className="font-mono text-base font-semibold text-[#111827] dark:text-[#F8FAFC] tabular-nums">
               {order.items.reduce((sum, item) => sum + item.quantity, 0)}{" "}
               <span className="text-xs font-normal text-muted-foreground">
                 ({order.items.length} unique)
@@ -150,7 +150,7 @@ export function OrderHeader({ order }: OrderHeaderProps) {
             <span className="text-[11px] uppercase tracking-wider text-muted-foreground block font-medium">
               Gross Profit
             </span>
-            <span className="font-mono text-base font-semibold text-emerald-500">
+            <span className="font-mono text-base font-semibold text-[#059669] dark:text-[#10B981] tabular-nums">
               {formatINR(order.grossProfit)}
             </span>
           </div>

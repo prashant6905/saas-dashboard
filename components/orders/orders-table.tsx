@@ -224,11 +224,11 @@ export function OrdersTable({
           const isCopied = copiedId === id;
 
           return (
-            <div className="flex items-center gap-1.5 font-mono text-xs font-medium text-foreground">
+            <div className="flex items-center gap-1.5 font-mono text-[13px] font-medium text-foreground tabular-nums">
               <Link
                 href={`/orders/${id}`}
                 onClick={(e) => e.stopPropagation()}
-                className="hover:underline text-primary hover:text-primary/80 font-semibold"
+                className="hover:underline text-[#4338CA] dark:text-[#A78BFA] hover:text-[#4338CA]/80 dark:hover:text-[#A78BFA]/80 font-semibold font-mono text-[13px] tabular-nums"
                 aria-label={`View details for order ${id}`}
               >
                 {id}
@@ -283,7 +283,7 @@ export function OrdersTable({
           return (
             <div className="flex flex-col min-w-[150px] max-w-[200px]">
               <div className="flex items-center gap-1.5">
-                <span className="truncate font-medium text-foreground text-xs">
+                <span className="truncate font-medium text-[#111827] dark:text-[#F8FAFC] text-[13px]">
                   {name}
                 </span>
                 {segment === "VIP" && (
@@ -295,7 +295,7 @@ export function OrdersTable({
                   </Badge>
                 )}
               </div>
-              <span className="truncate text-[11px] text-muted-foreground">
+              <span className="truncate text-xs text-[#64748B] dark:text-[#94A3B8]">
                 {email}
               </span>
             </div>
@@ -331,8 +331,8 @@ export function OrdersTable({
 
           return (
             <div className="flex flex-col font-mono text-[11px] min-w-[100px]">
-              <span className="text-foreground">{formatted}</span>
-              <span className="text-muted-foreground/70 text-[10px]">{time}</span>
+              <span className="text-[#475569] dark:text-[#CBD5E1] text-[13px] font-medium tabular-nums">{formatted}</span>
+              <span className="text-[#64748B] dark:text-[#94A3B8] text-[11px] tabular-nums">{time}</span>
             </div>
           );
         },
@@ -380,7 +380,7 @@ export function OrdersTable({
         cell: ({ row }) => {
           const amount = row.getValue("totalAmount") as number;
           return (
-            <div className="text-right font-mono text-xs font-semibold text-foreground">
+            <div className="text-right font-mono text-[13px] font-semibold text-[#111827] dark:text-[#F8FAFC] tabular-nums">
               {formatINR(amount)}
             </div>
           );
@@ -533,15 +533,15 @@ export function OrdersTable({
       {/* 2. TanStack Table Grid */}
       <CardContent className="p-0">
         <div className="overflow-x-auto border-t border-border/50">
-          <table className="w-full text-left text-xs border-collapse">
-            <thead className="border-b border-border/60 bg-muted/20 text-[11px] font-medium text-muted-foreground uppercase tracking-wider select-none">
+          <table className="w-full text-left text-[13px] border-collapse">
+            <thead className="border-b border-border/60 bg-muted/20 text-[11px] font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-[0.05em] font-table-header select-none">
               {table.getHeaderGroups().map((headerGroup) => (
                 <tr key={headerGroup.id}>
                   {headerGroup.headers.map((header) => (
                     <th
                       key={header.id}
                       className={cn(
-                        "py-2.5 px-4 font-medium",
+                        "py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em]",
                         header.id === "select" && "w-10 pr-0",
                         header.id === "actions" && "w-10 text-center"
                       )}

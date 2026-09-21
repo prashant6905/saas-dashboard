@@ -40,15 +40,15 @@ export function AnalyticsTopProductsTable({
       contentClassName="p-0"
     >
       <div className="overflow-x-auto">
-        <table className="w-full text-left text-xs">
-          <thead className="border-b border-border/60 bg-muted/20 text-[11px] font-medium text-muted-foreground uppercase tracking-wider">
+        <table className="w-full text-left text-[13px]">
+          <thead className="border-b border-border/60 bg-muted/20 text-[11px] font-semibold text-[#52627A] dark:text-[#A8B4C7] uppercase tracking-[0.05em] font-table-header">
             <tr>
               <th className="py-3 pl-4 pr-3">Product</th>
               <th className="px-3 py-3">Category</th>
-              <th className="px-3 py-3 text-right">Price / Cost</th>
-              <th className="px-3 py-3 text-right">Units Sold</th>
-              <th className="px-3 py-3 text-right">Gross Profit</th>
-              <th className="px-3 py-3 text-right">Margin %</th>
+              <th className="px-3 py-3 text-right font-semibold text-slate-600 dark:text-slate-400 font-table-header tracking-[0.05em]">Price / Cost</th>
+              <th className="px-3 py-3 text-right font-semibold text-slate-600 dark:text-slate-400 font-table-header tracking-[0.05em]">Units Sold</th>
+              <th className="px-3 py-3 text-right font-semibold text-slate-600 dark:text-slate-400 font-table-header tracking-[0.05em]">Gross Profit</th>
+              <th className="px-3 py-3 text-right font-semibold text-slate-600 dark:text-slate-400 font-table-header tracking-[0.05em]">Margin %</th>
               <th className="py-3 pl-3 pr-4 text-right">Revenue</th>
             </tr>
           </thead>

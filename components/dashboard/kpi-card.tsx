@@ -41,7 +41,7 @@ export function KpiCard({
           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 dark:bg-neutral-800 text-slate-700 dark:text-slate-300">
             <Icon className="h-3.5 w-3.5" aria-hidden="true" />
           </div>
-          <span className="text-xs font-medium text-muted-foreground">
+          <span className="text-xs font-medium text-[#64748B] dark:text-[#94A3B8]">
             {title}
           </span>
         </div>
@@ -53,7 +53,7 @@ export function KpiCard({
 
       {/* Main Metric Value: 500-600 Weight Hierarchy */}
       <div className="my-4">
-        <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-foreground">
+        <div className="text-2xl sm:text-[28px] font-[650] sm:font-bold tracking-[-0.025em] tabular-nums font-kpi text-[#0F172A] dark:text-[#F8FAFC]">
           {formatter(metric.current)}
         </div>
       </div>
@@ -64,11 +64,11 @@ export function KpiCard({
           {/* Trend Chip */}
           <span
             className={cn(
-              "inline-flex items-center gap-0.5 rounded-md px-1.5 py-0.5 font-medium text-xs",
+              "inline-flex items-center gap-0.5 rounded-md px-1.5 py-0.5 font-medium text-xs tabular-nums",
               isPositive &&
-                "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20",
+                "bg-emerald-500/10 text-[#059669] dark:text-[#10B981] border border-emerald-500/20",
               isNegative &&
-                "bg-rose-500/10 text-rose-700 dark:text-rose-400 border border-rose-500/20",
+                "bg-rose-500/10 text-[#DC2626] dark:text-[#F43F5E] border border-rose-500/20",
               isNeutral &&
                 "bg-neutral-100 text-muted-foreground border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700"
             )}
@@ -83,7 +83,7 @@ export function KpiCard({
             </span>
           </span>
 
-          <span className="text-muted-foreground text-xs font-normal truncate">
+          <span className="text-[#64748B] dark:text-[#94A3B8] text-xs font-normal truncate">
             {comparisonLabel}
           </span>
         </div>

@@ -211,9 +211,9 @@ export function CustomersTable({
 
         {/* Data Table */}
         <div className="overflow-x-auto border-t border-border/50">
-          <table className="w-full text-left border-collapse text-xs">
+          <table className="w-full text-left border-collapse text-[13px]">
             <thead>
-              <tr className="border-b border-border/60 bg-muted/20 text-[11px] font-medium text-muted-foreground uppercase tracking-wider select-none">
+              <tr className="border-b border-border/60 bg-muted/20 text-[11px] font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-[0.05em] font-table-header select-none">
                 {/* 1. Customer */}
                 <th
                   onClick={() => handleSortClick("name")}
@@ -226,17 +226,17 @@ export function CustomersTable({
                 </th>
 
                 {/* 2. Email */}
-                <th className="py-2.5 px-4">
+                <th className="py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em]">
                   <span>Email</span>
                 </th>
 
                 {/* 3. Region */}
-                <th className="py-2.5 px-4">
+                <th className="py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em]">
                   <span>Region</span>
                 </th>
 
                 {/* 4. Segment */}
-                <th className="py-2.5 px-4">
+                <th className="py-2.5 px-4 font-semibold text-[#52627A] dark:text-[#A8B4C7] font-table-header tracking-[0.05em]">
                   <span>Segment</span>
                 </th>
 
@@ -333,11 +333,11 @@ export function CustomersTable({
                             <Link
                               href={`/customers/${customer.id}`}
                               onClick={(e) => e.stopPropagation()}
-                              className="font-medium text-foreground hover:underline"
+                              className="font-medium text-[#111827] dark:text-[#F8FAFC] text-[13px] hover:underline"
                             >
                               {customer.name}
                             </Link>
-                            <div className="font-mono text-[10px] text-muted-foreground">
+                            <div className="font-mono text-[11px] text-[#64748B] dark:text-[#94A3B8]">
                               {customer.id}
                             </div>
                           </div>
@@ -345,7 +345,7 @@ export function CustomersTable({
                       </td>
 
                       {/* 2. Email */}
-                      <td className="py-3 px-4 font-mono text-[11px] text-muted-foreground">
+                      <td className="py-3 px-4 font-mono text-xs text-[#64748B] dark:text-[#94A3B8]">
                         {customer.email}
                       </td>
 
@@ -365,12 +365,12 @@ export function CustomersTable({
                       </td>
 
                       {/* 5. Orders Count */}
-                      <td className="py-3 px-4 text-right font-mono font-medium text-foreground">
+                      <td className="py-3 px-4 text-right font-mono text-[13px] font-medium text-[#111827] dark:text-[#F8FAFC] tabular-nums">
                         {formatIndianNumber(customer.ordersCount)}
                       </td>
 
                       {/* 6. Total Spend */}
-                      <td className="py-3 px-4 text-right font-mono font-semibold text-foreground">
+                      <td className="py-3 px-4 text-right font-mono text-[13px] font-semibold text-[#111827] dark:text-[#F8FAFC] tabular-nums">
                         {formatCurrency(customer.totalSpend)}
                       </td>
 
